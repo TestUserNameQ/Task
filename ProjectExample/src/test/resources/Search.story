@@ -14,3 +14,9 @@ Given I am on search page
 When Enter the value in Search field ---
 And click on search button
 Then verify the message
+
+Scenario: 1.1.3 Verify that enter empty value in search field will not give any results
+Given I am on search page
+When Enter the value in Search field ---
+And click on search button
+Then verify there is no message

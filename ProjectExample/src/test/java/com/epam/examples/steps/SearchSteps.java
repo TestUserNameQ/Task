@@ -3,7 +3,7 @@ package com.epam.examples.steps;
 import static org.junit.Assert.assertTrue;
 import com.epam.tests.pages.PageFactory;
 import com.epam.tests.pages.SearchPage;
-import org.apache.xpath.operations.String;
+import java.lang.String;
 import org.jbehave.core.annotations.BeforeScenario;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
@@ -45,6 +45,11 @@ public class SearchSteps {
 
     @Then("verify the message")
     public void messageIsShown() {
+        assertTrue(searchPage.verifyEmptySearchMessage());
+    }
+
+    @Then ("verify there is no message")
+    public void messageIsEmpty() {
         assertTrue(searchPage.verifyEmptySearchMessage());
     }
 }
