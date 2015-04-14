@@ -50,6 +50,6 @@ public class SearchSteps {
 
     @Then ("verify there is no message")
     public void messageIsEmpty() {
-        assertTrue(searchPage.verifyEmptySearchMessage());
+        assertTrue(searchPage.verifyEmptySearchMessage())
     }
 }
